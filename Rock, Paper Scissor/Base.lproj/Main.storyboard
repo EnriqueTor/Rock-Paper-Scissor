@@ -56,7 +56,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="papaerPushed" destination="fJo-VZ-De1" id="nc6-jV-IAf"/>
                         <outlet property="paperButton" destination="fJo-VZ-De1" id="Oj9-sw-Hv2"/>
                         <outlet property="rockButton" destination="nc7-ep-AuE" id="Gf2-UX-GIH"/>
                         <outlet property="scissorButton" destination="4Kw-mj-Fbc" id="tHg-qM-VZN"/>
