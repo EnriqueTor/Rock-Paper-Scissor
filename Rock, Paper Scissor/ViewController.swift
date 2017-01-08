@@ -9,17 +9,51 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    // MARK: - Outlets
+    
+    @IBOutlet weak var rockButton: UIButton!
+    @IBOutlet weak var paperButton: UIButton!
+    @IBOutlet weak var scissorButton: UIButton!
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    //MARK: - Loads
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    // MARK: - Actions
+    
+    @IBAction func rockPushed(_ sender: Any) {
+        
+        
+        
     }
-
-
+    
+    @IBAction func paperPushed(_ sender: Any) {
+        
+        
+        
+    }
+    
+    @IBAction func scissorPushed(_ sender: Any) {
+        
+        
+    }
+    
+    
+    
+    
+    
+    
 }
 

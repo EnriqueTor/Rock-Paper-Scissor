@@ -15,6 +15,7 @@
 		BBFB44691E2198A30002E30C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBFB44671E2198A30002E30C /* LaunchScreen.storyboard */; };
 		BBFB44741E2198A30002E30C /* Rock__Paper_ScissorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFB44731E2198A30002E30C /* Rock__Paper_ScissorTests.swift */; };
 		BBFB447F1E2198A30002E30C /* Rock__Paper_ScissorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFB447E1E2198A30002E30C /* Rock__Paper_ScissorUITests.swift */; };
+		BBFB44901E22C6F70002E30C /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFB448F1E22C6F70002E30C /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		BBFB447A1E2198A30002E30C /* Rock, Paper ScissorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Rock, Paper ScissorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBFB447E1E2198A30002E30C /* Rock__Paper_ScissorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rock__Paper_ScissorUITests.swift; sourceTree = "<group>"; };
 		BBFB44801E2198A30002E30C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBFB448F1E22C6F70002E30C /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +101,9 @@
 		BBFB445A1E2198A30002E30C /* Rock, Paper Scissor */ = {
 			isa = PBXGroup;
 			children = (
-				BBFB445B1E2198A30002E30C /* AppDelegate.swift */,
-				BBFB445D1E2198A30002E30C /* ViewController.swift */,
-				BBFB445F1E2198A30002E30C /* Main.storyboard */,
-				BBFB44651E2198A30002E30C /* Assets.xcassets */,
-				BBFB44671E2198A30002E30C /* LaunchScreen.storyboard */,
-				BBFB446A1E2198A30002E30C /* Info.plist */,
-				BBFB44621E2198A30002E30C /* Rock__Paper_Scissor.xcdatamodeld */,
+				BBFB448C1E22C6AB0002E30C /* Controller */,
+				BBFB448D1E22C6B40002E30C /* View */,
+				BBFB448E1E22C6BB0002E30C /* Support files */,
 			);
 			path = "Rock, Paper Scissor";
 			sourceTree = "<group>";
@@ -126,6 +124,35 @@
 				BBFB44801E2198A30002E30C /* Info.plist */,
 			);
 			path = "Rock, Paper ScissorUITests";
+			sourceTree = "<group>";
+		};
+		BBFB448C1E22C6AB0002E30C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BBFB445D1E2198A30002E30C /* ViewController.swift */,
+				BBFB448F1E22C6F70002E30C /* ResultViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		BBFB448D1E22C6B40002E30C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BBFB445F1E2198A30002E30C /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		BBFB448E1E22C6BB0002E30C /* Support files */ = {
+			isa = PBXGroup;
+			children = (
+				BBFB44651E2198A30002E30C /* Assets.xcassets */,
+				BBFB44671E2198A30002E30C /* LaunchScreen.storyboard */,
+				BBFB446A1E2198A30002E30C /* Info.plist */,
+				BBFB44621E2198A30002E30C /* Rock__Paper_Scissor.xcdatamodeld */,
+				BBFB445B1E2198A30002E30C /* AppDelegate.swift */,
+			);
+			name = "Support files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,6 +295,7 @@
 				BBFB445E1E2198A30002E30C /* ViewController.swift in Sources */,
 				BBFB445C1E2198A30002E30C /* AppDelegate.swift in Sources */,
 				BBFB44641E2198A30002E30C /* Rock__Paper_Scissor.xcdatamodeld in Sources */,
+				BBFB44901E22C6F70002E30C /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,6 +546,7 @@
 				BBFB44851E2198A30002E30C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BBFB44861E2198A30002E30C /* Build configuration list for PBXNativeTarget "Rock, Paper ScissorTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +555,7 @@
 				BBFB44881E2198A30002E30C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BBFB44891E2198A30002E30C /* Build configuration list for PBXNativeTarget "Rock, Paper ScissorUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +564,7 @@
 				BBFB448B1E2198A30002E30C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

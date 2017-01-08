@@ -27,14 +27,23 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nc7-ep-AuE">
                                         <rect key="frame" x="0.0" y="0.0" width="125" height="65"/>
                                         <state key="normal" image="rock"/>
+                                        <connections>
+                                            <action selector="rockPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gQh-Dy-e4c"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJo-VZ-De1">
                                         <rect key="frame" x="125" y="0.0" width="125" height="65"/>
                                         <state key="normal" image="paper"/>
+                                        <connections>
+                                            <action selector="paperPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y8e-Lc-PXe"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Kw-mj-Fbc">
                                         <rect key="frame" x="250" y="0.0" width="125" height="65"/>
                                         <state key="normal" image="scissors"/>
+                                        <connections>
+                                            <action selector="scissorPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="klT-Ee-MPE"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -47,6 +56,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="papaerPushed" destination="fJo-VZ-De1" id="nc6-jV-IAf"/>
+                        <outlet property="paperButton" destination="fJo-VZ-De1" id="Oj9-sw-Hv2"/>
+                        <outlet property="rockButton" destination="nc7-ep-AuE" id="Gf2-UX-GIH"/>
+                        <outlet property="scissorButton" destination="4Kw-mj-Fbc" id="tHg-qM-VZN"/>
                         <segue destination="HEC-iJ-6Jf" kind="showDetail" identifier="resultSegue" id="qLk-JP-Mo3"/>
                     </connections>
                 </viewController>
