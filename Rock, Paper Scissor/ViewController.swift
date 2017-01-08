@@ -23,9 +23,6 @@ class ViewController: UIViewController {
     let optionsPlay: [String] = ["rock", "paper", "scissor"]
     var result = ""
     
-    
-    
-    
     //MARK: - Loads
     
     override func viewDidLoad() {
@@ -41,8 +38,8 @@ class ViewController: UIViewController {
         
         playerHand(sender: sender)
         computerHand()
-        letsPlay()
-
+        results()
+        
         print(playerPlay)
         print(computerPlay)
         print(result)
@@ -55,33 +52,27 @@ class ViewController: UIViewController {
         
         playerHand(sender: sender)
         computerHand()
-        letsPlay()
+        results()
         
         print(playerPlay)
         print(computerPlay)
         print(result)
         
         performSegue(withIdentifier: "resultSegue", sender: self)
+        
     }
     
     @IBAction func scissorPushed(_ sender: UIButton) {
         
         playerHand(sender: sender)
         computerHand()
-        letsPlay()
+        results()
         
         print(playerPlay)
         print(computerPlay)
         print(result)
         
         performSegue(withIdentifier: "resultSegue", sender: self)
-    }
-    
-    
-    func letsPlay() {
-        
-        results()
-        
     }
     
     func playerHand(sender: UIButton) {
@@ -123,13 +114,12 @@ class ViewController: UIViewController {
         
         if segue.identifier == "resultSegue" {
             
-            var dest = segue.destination as! ResultViewController
+            let dest = segue.destination as! ResultViewController
             
-            dest.whoWon.text = result
+            dest.labelText = result
             
         }
-        
-        
     }
+    
 }
 
