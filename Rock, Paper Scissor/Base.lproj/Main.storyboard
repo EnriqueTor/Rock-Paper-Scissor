@@ -67,23 +67,23 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
-        <!--View Controller-->
+        <!--Result View Controller-->
         <scene sceneID="p6c-qu-dya">
             <objects>
-                <viewController id="HEC-iJ-6Jf" sceneMemberID="viewController">
+                <viewController id="HEC-iJ-6Jf" customClass="ResultViewController" customModule="Rock__Paper_Scissor" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="csA-Da-uJN"/>
                         <viewControllerLayoutGuide type="bottom" id="heJ-hC-wMR"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kiH-Sa-4AA">
+                    <view key="view" contentMode="scaleToFill" id="kiH-Sa-4AA" customClass="res">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IqY-Xl-khP">
-                                <rect key="frame" x="166" y="193" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Winner" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IqY-Xl-khP">
+                                <rect key="frame" x="166" y="193" width="91" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YiR-SW-Wuw">
@@ -91,17 +91,27 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W8P-6b-c2q">
-                                <rect key="frame" x="173" y="462" width="46" height="30"/>
+                                <rect key="frame" x="157" y="462" width="79" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Play Again?">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="againPushed:" destination="HEC-iJ-6Jf" eventType="touchUpInside" id="csx-BG-aUj"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="againButton" destination="W8P-6b-c2q" id="UIc-YB-1an"/>
+                        <outlet property="whoWon" destination="IqY-Xl-khP" id="U9r-bD-Jvj"/>
+                        <outlet property="winnerImage" destination="YiR-SW-Wuw" id="cpk-9U-RT1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iiS-ri-scb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="900" y="138"/>
+            <point key="canvasLocation" x="900" y="137.18140929535232"/>
         </scene>
     </scenes>
     <resources>

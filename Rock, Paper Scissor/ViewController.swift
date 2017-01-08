@@ -35,19 +35,19 @@ class ViewController: UIViewController {
     
     @IBAction func rockPushed(_ sender: Any) {
         
-        
+        performSegue(withIdentifier: "resultSegue", sender: self)
         
     }
     
     @IBAction func paperPushed(_ sender: Any) {
         
         
-        
+        performSegue(withIdentifier: "resultSegue", sender: self)
     }
     
     @IBAction func scissorPushed(_ sender: Any) {
         
-        
+        performSegue(withIdentifier: "resultSegue", sender: self)
     }
     
     

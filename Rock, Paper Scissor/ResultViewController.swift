@@ -10,25 +10,27 @@ import UIKit
 
 class ResultViewController: UIViewController {
 
+    // MARK: - Outlets
+    
+    @IBOutlet weak var whoWon: UILabel!
+    @IBOutlet weak var winnerImage: UIImageView!
+    @IBOutlet weak var againButton: UIButton!
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    // MARK: - Loads
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
 
-   
+   // MARK: - Actions
+    
+    @IBAction func againPushed(_ sender: Any) {
+        
+        dismiss(animated: true, completion: nil)
+        
+    }
     
     
     
