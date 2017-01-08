@@ -29,7 +29,7 @@
                                         <accessibility key="accessibilityConfiguration" identifier="rock"/>
                                         <state key="normal" image="rock"/>
                                         <connections>
-                                            <action selector="rockPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gQh-Dy-e4c"/>
+                                            <action selector="buttonPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z9z-Cq-ZDN"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJo-VZ-De1">
@@ -37,15 +37,15 @@
                                         <accessibility key="accessibilityConfiguration" identifier="paper"/>
                                         <state key="normal" image="paper"/>
                                         <connections>
-                                            <action selector="paperPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y8e-Lc-PXe"/>
+                                            <action selector="buttonPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wWJ-82-Jb9"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Kw-mj-Fbc">
                                         <rect key="frame" x="250" y="0.0" width="125" height="65"/>
                                         <accessibility key="accessibilityConfiguration" identifier="scissor"/>
-                                        <state key="normal" image="scissors"/>
+                                        <state key="normal" image="scissor"/>
                                         <connections>
-                                            <action selector="scissorPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="klT-Ee-MPE"/>
+                                            <action selector="buttonPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VMi-21-yzN"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -81,29 +81,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YiR-SW-Wuw">
-                                <rect key="frame" x="76" y="257" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YiR-SW-Wuw">
+                                <rect key="frame" x="87" y="253.5" width="200" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="0XT-LU-fPq"/>
+                                    <constraint firstAttribute="width" constant="200" id="aEX-LJ-lEg"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W8P-6b-c2q">
-                                <rect key="frame" x="157" y="462" width="79" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Play Again?">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W8P-6b-c2q">
+                                <rect key="frame" x="167.5" y="463.5" width="39" height="30"/>
+                                <state key="normal" title="Again">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="againPushed:" destination="HEC-iJ-6Jf" eventType="touchUpInside" id="csx-BG-aUj"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Winner" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IqY-Xl-khP">
-                                <rect key="frame" x="76" y="190" width="240" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winner" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IqY-Xl-khP">
+                                <rect key="frame" x="160" y="182.5" width="54.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YiR-SW-Wuw" firstAttribute="centerX" secondItem="kiH-Sa-4AA" secondAttribute="centerX" id="06p-mg-erl"/>
+                            <constraint firstItem="IqY-Xl-khP" firstAttribute="centerX" secondItem="YiR-SW-Wuw" secondAttribute="centerX" id="UZG-Hh-xvg"/>
+                            <constraint firstItem="W8P-6b-c2q" firstAttribute="top" secondItem="YiR-SW-Wuw" secondAttribute="bottom" constant="50" id="WnY-Z5-Xjg"/>
+                            <constraint firstItem="W8P-6b-c2q" firstAttribute="centerX" secondItem="YiR-SW-Wuw" secondAttribute="centerX" id="itg-7g-64N"/>
+                            <constraint firstItem="YiR-SW-Wuw" firstAttribute="top" secondItem="IqY-Xl-khP" secondAttribute="bottom" constant="50" id="k2O-c3-vr0"/>
+                            <constraint firstItem="YiR-SW-Wuw" firstAttribute="centerY" secondItem="kiH-Sa-4AA" secondAttribute="centerY" id="uha-KQ-bS4"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="againButton" destination="W8P-6b-c2q" id="UIc-YB-1an"/>
@@ -119,6 +128,6 @@
     <resources>
         <image name="paper" width="75" height="65"/>
         <image name="rock" width="75" height="65"/>
-        <image name="scissors" width="75" height="65"/>
+        <image name="scissor" width="75" height="65"/>
     </resources>
 </document>

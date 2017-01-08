@@ -16,6 +16,7 @@
 		BBFB44741E2198A30002E30C /* Rock__Paper_ScissorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFB44731E2198A30002E30C /* Rock__Paper_ScissorTests.swift */; };
 		BBFB447F1E2198A30002E30C /* Rock__Paper_ScissorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFB447E1E2198A30002E30C /* Rock__Paper_ScissorUITests.swift */; };
 		BBFB44901E22C6F70002E30C /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFB448F1E22C6F70002E30C /* ResultViewController.swift */; };
+		BBFB44921E22DC980002E30C /* Hand.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFB44911E22DC980002E30C /* Hand.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		BBFB447E1E2198A30002E30C /* Rock__Paper_ScissorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rock__Paper_ScissorUITests.swift; sourceTree = "<group>"; };
 		BBFB44801E2198A30002E30C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BBFB448F1E22C6F70002E30C /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		BBFB44911E22DC980002E30C /* Hand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hand.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			children = (
 				BBFB448C1E22C6AB0002E30C /* Controller */,
 				BBFB448D1E22C6B40002E30C /* View */,
+				BBFB44931E22DCA00002E30C /* Model */,
 				BBFB448E1E22C6BB0002E30C /* Support files */,
 			);
 			path = "Rock, Paper Scissor";
@@ -153,6 +156,14 @@
 				BBFB445B1E2198A30002E30C /* AppDelegate.swift */,
 			);
 			name = "Support files";
+			sourceTree = "<group>";
+		};
+		BBFB44931E22DCA00002E30C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BBFB44911E22DC980002E30C /* Hand.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBFB445E1E2198A30002E30C /* ViewController.swift in Sources */,
+				BBFB44921E22DC980002E30C /* Hand.swift in Sources */,
 				BBFB445C1E2198A30002E30C /* AppDelegate.swift in Sources */,
 				BBFB44641E2198A30002E30C /* Rock__Paper_Scissor.xcdatamodeld in Sources */,
 				BBFB44901E22C6F70002E30C /* ResultViewController.swift in Sources */,

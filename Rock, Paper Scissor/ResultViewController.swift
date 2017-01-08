@@ -19,6 +19,7 @@ class ResultViewController: UIViewController {
     // MARK: - Variables
     
     var labelText = String()
+    var wonImage = UIImage()
     
     // MARK: - Loads
     
@@ -26,6 +27,7 @@ class ResultViewController: UIViewController {
         super.viewDidLoad()
         
         whoWon?.text = labelText
+        winnerImage.image = wonImage
 
     }
 
