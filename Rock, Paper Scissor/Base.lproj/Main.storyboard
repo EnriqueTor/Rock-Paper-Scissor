@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -50,12 +51,20 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ROCK, PAPER, SCISSOR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YxH-EF-bOI">
+                                <rect key="frame" x="67" y="155" width="240.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ZqL-wh-OuR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AYy-gC-OML"/>
                             <constraint firstItem="ZqL-wh-OuR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="EsW-7G-FBP"/>
                             <constraint firstItem="ZqL-wh-OuR" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="QLk-1Q-ohz"/>
+                            <constraint firstItem="YxH-EF-bOI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.5" id="Srn-eD-Fer"/>
+                            <constraint firstItem="YxH-EF-bOI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kYK-jJ-vgg"/>
                         </constraints>
                     </view>
                     <connections>
@@ -89,8 +98,8 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W8P-6b-c2q">
-                                <rect key="frame" x="167.5" y="463.5" width="39" height="30"/>
-                                <state key="normal" title="Again">
+                                <rect key="frame" x="164.5" y="463.5" width="46" height="30"/>
+                                <state key="normal" title="Again?">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
