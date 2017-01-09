@@ -12,23 +12,24 @@ class ResultViewController: UIViewController {
 
     // MARK: - Outlets
     
-    @IBOutlet weak var whoWon: UILabel?
-    @IBOutlet weak var winnerImage: UIImageView!
+    @IBOutlet weak var whoWon: UILabel!
+    @IBOutlet weak var winnerImage: UIImageView?
     @IBOutlet weak var againButton: UIButton!
     
     // MARK: - Variables
     
-    var labelText = String()
-    var wonImage = UIImage()
+    var labelText: String = ""
+    var wonImage: UIImage?
     
     // MARK: - Loads
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        whoWon?.text = labelText
-        winnerImage.image = wonImage
-
+        whoWon.text = labelText
+        winnerImage?.image = wonImage
+        
+        print(whoWon.text!)
     }
 
    // MARK: - Actions

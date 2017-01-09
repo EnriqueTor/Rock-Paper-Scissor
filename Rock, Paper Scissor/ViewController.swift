@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     
     // MARK: - Outlets
     
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var rockButton: UIButton!
     @IBOutlet weak var paperButton: UIButton!
     @IBOutlet weak var scissorButton: UIButton!
@@ -22,7 +23,7 @@ class ViewController: UIViewController {
     var computerPlay: String = ""
     let optionsPlay: [String] = [Hand.rock.rawValue, Hand.paper.rawValue, Hand.scissor.rawValue]
     var result = ""
-    var imageResult = UIImage()
+    var imageResult: UIImage?
     
     //MARK: - Loads
     
@@ -36,7 +37,7 @@ class ViewController: UIViewController {
     // MARK: - Actions
     
     @IBAction func buttonPushed(_ sender: UIButton) {
-        
+        print(1)
         playerHand(sender: sender)
         computerHand()
         results()
@@ -51,7 +52,7 @@ class ViewController: UIViewController {
     
     func playerHand(sender: UIButton) {
         
-        playerPlay = (sender.currentImage?.accessibilityIdentifier)!
+        playerPlay = sender.accessibilityLabel!
         
     }
     
@@ -71,15 +72,15 @@ class ViewController: UIViewController {
                 
             case Hand.rock.rawValue:
                 result = "TIE"
-                imageResult = UIImage(named: "itsATie")!
+                imageResult = UIImage(named: "itsATie")
 
             case Hand.paper.rawValue:
                 result = "COMPUTER WON"
-                imageResult = UIImage(named: "PaperCoversRock")!
+                imageResult = UIImage(named: "PaperCoversRock")
                 
             case Hand.scissor.rawValue:
                 result = "PLAYER WON"
-                imageResult = UIImage(named: "RockCrushesScissors")!
+                imageResult = UIImage(named: "RockCrushesScissors")
                 
             default:
                 break
@@ -93,15 +94,15 @@ class ViewController: UIViewController {
                 
             case Hand.rock.rawValue:
                 result = "PLAYER WON"
-                imageResult = UIImage(named: "PaperCoversRock")!
+                imageResult = UIImage(named: "PaperCoversRock")
                 
             case Hand.paper.rawValue:
                 result = "TIE"
-                imageResult = UIImage(named: "itsATie")!
-
+                imageResult = UIImage(named: "itsATie")
+                
             case Hand.scissor.rawValue:
                 result = "COMPUTER WON"
-                imageResult = UIImage(named: "ScissorsCutPaper")!
+                imageResult = UIImage(named: "ScissorsCutPaper")
                 
             default:
                 break
@@ -115,15 +116,15 @@ class ViewController: UIViewController {
                 
             case Hand.rock.rawValue:
                 result = "COMPUTER WON"
-                imageResult = UIImage(named: "RockCrushesScissors")!
+                imageResult = UIImage(named: "RockCrushesScissors")
                 
             case Hand.paper.rawValue:
                 result = "PLAYER WON"
-                imageResult = UIImage(named: "ScissorsCutPaper")!
+                imageResult = UIImage(named: "ScissorsCutPaper")
                 
             case Hand.scissor.rawValue:
                 result = "TIE"
-                imageResult = UIImage(named: "itsATie")!
+                imageResult = UIImage(named: "itsATie")
 
             default:
                 break
@@ -137,6 +138,9 @@ class ViewController: UIViewController {
         if segue.identifier == "resultSegue" {
             
             let dest = segue.destination as! ResultViewController
+            
+            print(result)
+            print(imageResult?.description)
             
             dest.labelText = result
             dest.wonImage = imageResult

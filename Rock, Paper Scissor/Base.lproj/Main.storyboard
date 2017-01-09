@@ -27,7 +27,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nc7-ep-AuE">
                                         <rect key="frame" x="0.0" y="0.0" width="125" height="65"/>
-                                        <accessibility key="accessibilityConfiguration" identifier="rock"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="rock" label="rock"/>
                                         <state key="normal" image="rock"/>
                                         <connections>
                                             <action selector="buttonPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z9z-Cq-ZDN"/>
@@ -35,7 +35,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJo-VZ-De1">
                                         <rect key="frame" x="125" y="0.0" width="125" height="65"/>
-                                        <accessibility key="accessibilityConfiguration" identifier="paper"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="paper" label="paper"/>
                                         <state key="normal" image="paper"/>
                                         <connections>
                                             <action selector="buttonPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wWJ-82-Jb9"/>
@@ -43,7 +43,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Kw-mj-Fbc">
                                         <rect key="frame" x="250" y="0.0" width="125" height="65"/>
-                                        <accessibility key="accessibilityConfiguration" identifier="scissor"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="scissor" label="scissor"/>
                                         <state key="normal" image="scissor"/>
                                         <connections>
                                             <action selector="buttonPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VMi-21-yzN"/>
@@ -71,6 +71,7 @@
                         <outlet property="paperButton" destination="fJo-VZ-De1" id="Oj9-sw-Hv2"/>
                         <outlet property="rockButton" destination="nc7-ep-AuE" id="Gf2-UX-GIH"/>
                         <outlet property="scissorButton" destination="4Kw-mj-Fbc" id="tHg-qM-VZN"/>
+                        <outlet property="titleLabel" destination="YxH-EF-bOI" id="QBX-dK-BMQ"/>
                         <segue destination="HEC-iJ-6Jf" kind="show" identifier="resultSegue" action="showDetailViewController:sender:" id="qLk-JP-Mo3"/>
                     </connections>
                 </viewController>
