@@ -1,5 +1,7 @@
 # Rock-Paper-Scissor
 
+Academic project.
+
 This is a simple game where the player plays "Rock, Paper, Scissor" against the computer.
 
 To do this we used:
